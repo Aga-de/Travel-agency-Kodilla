@@ -13,6 +13,7 @@ const baseConfig = () => ({
   devServer: {
     historyApiFallback: true,
   },
+  devtool : 'inline-source-map',
   module: {
     rules: [
       {
