@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import OrderSummary from '../OrderSummary/OrderSummary.js';
 import OrderOption from '../OrderOption/OrderOption';
-import {Col, Grid} from 'react-flexbox-grid';
+import {Col, Row} from 'react-flexbox-grid';
 import pricing from '../../../data/pricing.json';
+import styles from './OrderForm.scss';
 
 const OrderForm = ({tripCost, options, setOrderOption}) => {
   return (
-    <Grid>
-      <div>
+    <Row>
+      <div className = {styles.options}>
         {pricing.map(option =>         
           <Col key={option.id} md={4}>
             <OrderOption key={option.id}{...option} 
@@ -20,7 +21,7 @@ const OrderForm = ({tripCost, options, setOrderOption}) => {
       <Col xs={12}>
         <OrderSummary cost={tripCost} options={options}/>
       </Col>
-    </Grid>
+    </Row>
   );
 };
 
