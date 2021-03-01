@@ -1,0 +1,26 @@
+@import '../../../styles/settings.scss';
+
+@import '../../../styles/settings.scss';
+
+.component {
+  background: $color-dark;
+  padding: ($base-size * 1.5) 0;
+  color: $color-light;
+}
+
+.number {
+  position: relative;
+  top: ($base-size / -4);
+  left: $base-size;
+  font-family: $font-header;
+  font-size: ($base-size);
+}
+
+
+@media (max-width: 767px) {
+
+  .component {
+    text-align: center;
+  }
+
+}
